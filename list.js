@@ -1,3 +1,14 @@
+// let list = {
+//   value: 1,
+//   rest: {
+//     value: 2,
+//     rest: {
+//       value: 3,
+//       rest: null,
+//     },
+//   },
+// };
+
 function arrayToList(array) {
   let list = null;
 
@@ -25,17 +36,6 @@ function nth(list, n) {
   else if (n == 0) return list.value;
   else return nth(list.rest, n - 1);
 }
-
-// let list = {
-//   value: 1,
-//   rest: {
-//     value: 2,
-//     rest: {
-//       value: 3,
-//       rest: null,
-//     },
-//   },
-// };
 
 console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
